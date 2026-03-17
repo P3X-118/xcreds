@@ -888,9 +888,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, DSQueryable {
             DefaultsOverride.standardOverride.register(defaults: defaultsDict as! [String : Any])
         }
 
-        VersionCheck.shared.reportLicenseUsage(event: .checkin) { isSuccess in
-            print(isSuccess)
-        }
+        // VersionCheck.shared.reportLicenseUsage(event: .checkin) { isSuccess in
+        //     print(isSuccess)
+        // }
 
         let infoPlist = Bundle.main.infoDictionary
 
@@ -931,12 +931,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, DSQueryable {
         if let thisAppVersion = thisAppVersion, let thisAppBundleID = thisAppBundleID,
            let thisAppVersionFloat = Float(thisAppVersion){
 
-            VersionCheck.shared.versionForIdentifier(identifier: thisAppBundleID, version: thisAppVersion) { isSuccess, version in
-
-                if let versionFloat = Float(version),!thisAppVersion.isEmpty, !version.isEmpty, thisAppVersionFloat < versionFloat {
-                    TCSLogErrorWithMark("New version available: \(thisAppVersion) < \(version)")
-                }
-            }
+            // VersionCheck.shared.versionForIdentifier(identifier: thisAppBundleID, version: thisAppVersion) { isSuccess, version in
+                //
+                //                 if let versionFloat = Float(version),!thisAppVersion.isEmpty, !version.isEmpty, thisAppVersionFloat < versionFloat {
+                //                     TCSLogErrorWithMark("New version available: \(thisAppVersion) < \(version)")
+                //                 }
+            // }
         }
     }
     func applicationWillTerminate(_ aNotification: Notification) {

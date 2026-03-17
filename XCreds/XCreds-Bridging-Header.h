@@ -13,7 +13,7 @@
 #import "TCSUnifiedLogger.h"
 #import "TCTaskHelper.h"
 #ifndef AUTOFILL_TARGET
-#import <ProductLicense/ProductLicense.h>
+// #import <ProductLicense/ProductLicense.h>
 #endif
 #import "TCSLoginWindowUtilities.h"
 #import "DNSResolver.h"

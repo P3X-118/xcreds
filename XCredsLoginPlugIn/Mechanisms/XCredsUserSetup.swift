@@ -3,7 +3,7 @@
 //
 //
 
-import ProductLicense
+// import ProductLicense
 @available(macOS, deprecated: 11)
 class XCredsUserSetup: XCredsBaseMechanism{
 
@@ -18,9 +18,9 @@ class XCredsUserSetup: XCredsBaseMechanism{
                 let build = infoPlist["CFBundleVersion"] as? String,
                 let version = infoPlist["CFBundleShortVersionString"] as? String {
                 
-                VersionCheck.shared.reportLicenseUsage(identifier: "com.twocanoes.xcreds", appVersion:version,buildNumber: build, event: .checkin) { isSuccess in
-                    print(isSuccess)
-                }
+                // VersionCheck.shared.reportLicenseUsage(identifier: "com.twocanoes.xcreds", appVersion:version,buildNumber: build, event: .checkin) { isSuccess in
+                //     print(isSuccess)
+                // }
 
                 
                 TCSLogInfoWithMark("------------------------------------------------------------------")

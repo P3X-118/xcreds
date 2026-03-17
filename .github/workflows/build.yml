@@ -1,0 +1,159 @@
+name: Build Release
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - release-*
+      - sgc
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g., 5.5.0)'
+        required: false
+        type: string
+
+env:
+  PRODUCT_NAME: XCreds
+  SCHEME: XCreds
+
+jobs:
+  build:
+    name: Build ${{ matrix.target }}
+    runs-on: macos-14
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: XCreds
+            scheme: XCreds
+          - target: XCreds Login Plugin
+            scheme: XCredsLoginPlugin
+          - target: XCreds Login Overlay
+            scheme: XCreds Login Overlay
+          - target: XCreds Login Autofill
+            scheme: XCreds Login Autofill
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+
+      - name: Install Carthage
+        run: |
+          brew install carthage
+
+      - name: Update Carthage dependencies
+        run: carthage update --use-binaries
+
+      - name: Build ${{ matrix.target }}
+        run: |
+          xcodebuild -project XCreds.xcodeproj \
+            -scheme "${{ matrix.scheme }}" \
+            -configuration Release \
+            -derivedDataPath ./build \
+            build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.target }}
+          path: |
+            build/Build/Products/Release/${{ matrix.scheme }}.app
+            build/Build/Products/Release/${{ matrix.scheme }}.appex
+            build/Build/Products/Release/${{ matrix.scheme }}.bundle
+          retention-days: 30
+
+  package:
+    name: Package Release
+    needs: build
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+
+      - name: Install Carthage
+        run: |
+          brew install carthage
+
+      - name: Update Carthage dependencies
+        run: carthage update --use-binaries
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: ./artifacts
+
+      - name: Create Release Package
+        run: |
+          mkdir -p release
+          
+          # Package main app
+          if [ -d "artifacts/XCreds/XCreds.app" ]; then
+            zip -r release/XCreds.zip artifacts/XCreds/XCreds.app
+          fi
+          
+          # Package Login Plugin
+          if [ -d "artifacts/XCreds Login Plugin/XCredsLoginPlugin.bundle" ]; then
+            zip -r release/XCredsLoginPlugin.zip artifacts/XCreds\ Login\ Plugin/XCredsLoginPlugin.bundle
+          fi
+          
+          # Package Login Overlay
+          if [ -d "artifacts/XCreds Login Overlay/XCreds Login Overlay.app" ]; then
+            zip -r release/XCredsLoginOverlay.zip artifacts/XCreds\ Login\ Overlay/XCreds\ Login\ Overlay.app
+          fi
+          
+          # Package Autofill
+          if [ -d "artifacts/XCreds Login Autofill/XCreds Login Autofill.app" ]; then
+            zip -r release/XCredsLoginAutofill.zip artifacts/XCreds\ Login\ Autofill/XCreds\ Login\ Autofill.app
+          fi
+
+      - name: Upload Release Package
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-packages
+          path: release/
+          retention-days: 90
+
+  create-release:
+    name: Create Release
+    needs: package
+    runs-on: macos-14
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/heads/release-')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Release Package
+        uses: actions/download-artifact@v4
+        with:
+          name: release-packages
+          path: ./release
+
+      - name: Get Version
+        id: version
+        run: |
+          if [ "${{ github.event.inputs.version }}" != "" ]; then
+            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.1")
+            echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: XCreds ${{ steps.version.outputs.VERSION }}
+          draft: true
+          files: |
+            release/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
