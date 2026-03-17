@@ -61,7 +61,12 @@ jobs:
           if [ -n "$OIDCLITE_PATH" ] && [ -f "$OIDCLITE_PATH" ]; then
             echo "Found OIDCLite at: $OIDCLITE_PATH"
             # Fix the var 'code' issue in WKNavigationDelegate extension
+            # Change: var code = "" to: let code = ""
+            # And change: code = part... to: let codeValue = part...
+            # And change: self.getToken(code: code) to: self.getToken(code: codeValue)
             sed -i '' 's/var code = ""/let code = ""/' "$OIDCLITE_PATH"
+            sed -i '' 's/code = part\.replacingOccurrences/let codeValue = part.replacingOccurrences/' "$OIDCLITE_PATH"
+            sed -i '' 's/self\.getToken(code: code)/self.getToken(code: codeValue)/' "$OIDCLITE_PATH"
             echo "Patched OIDCLite"
           else
             echo "OIDCLite not found"
