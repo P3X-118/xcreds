@@ -50,6 +50,16 @@ jobs:
       - name: Update Carthage dependencies
         run: carthage update --use-binaries
 
+      - name: Patch OIDCLite for Swift concurrency
+        run: |
+          # Find and patch OIDCLite to fix Swift concurrency error
+          OIDCLITE_PATH=$(find build/SourcePackages -name "OIDCLite.swift" -path "*/OIDCLite/*" 2>/dev/null | head -1)
+          if [ -n "$OIDCLITE_PATH" ]; then
+            # Fix the var 'code' issue - change to let
+            sed -i '' 's/var code = ""/let code = ""/' "$OIDCLITE_PATH"
+            sed -i '' 's/self.getToken(code: code)/let codeValue = code; self.getToken(code: codeValue)/' "$OIDCLITE_PATH"
+          fi
+
       - name: Build ${{ matrix.target }}
         env:
           CODE_SIGN_IDENTITY: "-"
@@ -61,7 +71,6 @@ jobs:
             -configuration Release \
             -derivedDataPath ./build \
             CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO \
-            OTHER_SWIFT_FLAGS="-Xfrontend -strict-concurrency=minimal" \
             build
 
       - name: Upload Artifact
