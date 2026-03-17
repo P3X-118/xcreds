@@ -50,14 +50,21 @@ jobs:
       - name: Update Carthage dependencies
         run: carthage update --use-binaries
 
+      - name: Resolve Swift packages
+        run: xcodebuild -project XCreds.xcodeproj -scheme XCreds -resolvePackageDependencies
+
       - name: Patch OIDCLite for Swift concurrency
         run: |
           # Find and patch OIDCLite to fix Swift concurrency error
           OIDCLITE_PATH=$(find build/SourcePackages -name "OIDCLite.swift" -path "*/OIDCLite/*" 2>/dev/null | head -1)
           if [ -n "$OIDCLITE_PATH" ]; then
-            # Fix the var 'code' issue - change to let
+            echo "Found OIDCLite at: $OIDCLITE_PATH"
+            # Fix the var 'code' issue in WKNavigationDelegate extension
+            # The issue is in the webView delegate method where var code is captured
             sed -i '' 's/var code = ""/let code = ""/' "$OIDCLITE_PATH"
-            sed -i '' 's/self.getToken(code: code)/let codeValue = code; self.getToken(code: codeValue)/' "$OIDCLITE_PATH"
+            echo "Patched OIDCLite"
+          else
+            echo "OIDCLite not found in SourcePackages"
           fi
 
       - name: Build ${{ matrix.target }}
