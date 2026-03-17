@@ -18,7 +18,7 @@ class XCredsUserSetup: XCredsBaseMechanism{
                 let build = infoPlist["CFBundleVersion"] as? String,
                 let version = infoPlist["CFBundleShortVersionString"] as? String {
                 
-                // VersionCheck.shared.reportLicenseUsage(identifier: "com.ai.sgc.xcreds", appVersion:version,buildNumber: build, event: .checkin) { isSuccess in
+                // VersionCheck.shared.reportLicenseUsage(identifier: "ai.sgc.xcreds", appVersion:version,buildNumber: build, event: .checkin) { isSuccess in
                 //     print(isSuccess)
                 // }
 
@@ -28,11 +28,11 @@ class XCredsUserSetup: XCredsBaseMechanism{
                 if DefaultsOverride.standardOverride.bool(forKey: "showDebug")==false {
                     TCSLogInfoWithMark("Log showing only basic info and errors.")
                     TCSLogInfoWithMark("Set debugLogging to true to show verbose logging with")
-                    TCSLogInfoWithMark("sudo defaults write /Library/Preferences/com.ai.sgc.xcreds showDebug -bool true")
+                    TCSLogInfoWithMark("sudo defaults write /Library/Preferences/ai.sgc.xcreds showDebug -bool true")
                 }
                 else {
                     TCSLogInfoWithMark("To disable verbose logging:")
-                    TCSLogInfoWithMark("sudo defaults delete /Library/Preferences/com.ai.sgc.xcreds showDebug")
+                    TCSLogInfoWithMark("sudo defaults delete /Library/Preferences/ai.sgc.xcreds showDebug")
 
                 }
                 TCSLogInfoWithMark("To see all logging options, go to https://ai-sgc.com/knowledge-base/capturing-xcreds-logs/")
@@ -43,7 +43,7 @@ class XCredsUserSetup: XCredsBaseMechanism{
         }
         TCSLogWithMark("checking to see if launchagent should be removed...")
         let fm = FileManager.default
-        let launchAgentPath = "/Library/LaunchAgents/com.ai.sgc.xcreds-launchagent.plist"
+        let launchAgentPath = "/Library/LaunchAgents/ai.sgc.xcreds-launchagent.plist"
         let launchAgentExists = fm.fileExists(atPath: launchAgentPath)
         if DefaultsOverride.standardOverride.bool(forKey: PrefKeys.shouldRemoveMenuItemAutoLaunch.rawValue)==true, launchAgentExists == true {
             do {

@@ -9,7 +9,7 @@
 	<key>pfm_documentation_url</key>
 	<string>https://ai-sgc.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 	<key>pfm_domain</key>
-	<string>com.ai.sgc.xcreds</string>
+	<string>ai.sgc.xcreds</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
@@ -52,7 +52,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>com.ai.sgc.xcreds</string>
+			<string>ai.sgc.xcreds</string>
 			<key>pfm_description</key>
 			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
@@ -69,7 +69,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>com.ai.sgc.xcreds</string>
+			<string>ai.sgc.xcreds</string>
 			<key>pfm_description</key>
 			<string>The payload type, which each payload domain's reference page specifies.</string>
 			<key>pfm_description_reference</key>

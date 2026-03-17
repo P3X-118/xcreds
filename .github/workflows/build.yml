@@ -55,12 +55,14 @@ jobs:
           CODE_SIGN_IDENTITY: "-"
           CODE_SIGNING_REQUIRED: "NO"
           CODE_SIGNING_ALLOWED: "NO"
+          SWIFT_STRICT_CONCURRENCY: minimal
         run: |
           xcodebuild -project XCreds.xcodeproj \
             -scheme "${{ matrix.scheme }}" \
             -configuration Release \
             -derivedDataPath ./build \
             CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO \
+            SWIFT_STRICT_CONCURRENCY=minimal \
             build
 
       - name: Upload Artifact
