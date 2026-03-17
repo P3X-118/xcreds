@@ -6,7 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/twocanoes/OIDCLite.git",
       "state" : {
-        "revision" : "b172e6d22b730c7f93078ee0cf3e5f555f016069"
+        "branch" : "develop",
+        "revision" : "dad2dbea722711d8ba3f774ac0f850032b160a33"
       }
     },
     {
