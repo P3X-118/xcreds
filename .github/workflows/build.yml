@@ -51,12 +51,17 @@ jobs:
         run: carthage update --use-binaries
 
       - name: Build ${{ matrix.target }}
+        env:
+          CODE_SIGN_IDENTITY: "-"
+          CODE_SIGNING_REQUIRED: "NO"
+          CODE_SIGNING_ALLOWED: "NO"
         run: |
           xcodebuild -project XCreds.xcodeproj \
             -scheme "${{ matrix.scheme }}" \
             -configuration Release \
             -derivedDataPath ./build \
-            build CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO \
+            build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4

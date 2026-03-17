@@ -35,7 +35,7 @@ extension NSImage {
 
             let imageName = pathURL.lastPathComponent
 
-            let cacheFolder  = cacheDir.appendingPathComponent("com.twocanoes.xcreds") as NSString
+            let cacheFolder  = cacheDir.appendingPathComponent("com.ai.sgc.xcreds") as NSString
 
             let imageFullPath = cacheFolder.appendingPathComponent(imageName) as NSString
             TCSLogWithMark("imageFullPath: \(imageFullPath)")

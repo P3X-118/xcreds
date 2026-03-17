@@ -8,7 +8,7 @@
 #import "NSData+HexString.h"
 #import <CryptoTokenKit/CryptoTokenKit.h>
 
-NSString *const TCSKeychainService = @"com.twocanoes.mds.apns";
+NSString *const TCSKeychainService = @"com.ai.sgc.mds.apns";
 
 
 @implementation TCSKeychain

@@ -152,7 +152,7 @@ Command-Option-Control-Return: Switch between cloud and Mac login window.
 ### Account Alias ###
 When a new preference is set (“aliasName”) to a claim in the identity token, the value in that claim is used to set an alias to the user account, allowing them to login with it.
 
-An example: Set the preferences to have aliasName = “upn”. Log in as barney@twocanoes.com. The identity token has a claim called “upn” whose value was “barney@twocanoes.com“. XCreds then adds barney@twocanoes.com that is an alias and the user can login with either barney or barney@twocanoes.com at the local and mac login window. This gives the user a consistent way to log in at the cloud login or the standard / Mac login window.
+An example: Set the preferences to have aliasName = “upn”. Log in as barney@ai-sgc.com. The identity token has a claim called “upn” whose value was “barney@ai-sgc.com“. XCreds then adds barney@ai-sgc.com that is an alias and the user can login with either barney or barney@ai-sgc.com at the local and mac login window. This gives the user a consistent way to log in at the cloud login or the standard / Mac login window.
 
 ### New Features ###
 * Removed logging messages that had a local path from the build system.

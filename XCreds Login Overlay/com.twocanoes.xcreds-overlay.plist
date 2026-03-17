@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.twocanoes.xcreds-overlay</string>
+	<string>com.ai.sgc.xcreds-overlay</string>
 	<key>ThrottleInterval</key>
 	<integer>30</integer>
 	<key>LimitLoadToSessionType</key>

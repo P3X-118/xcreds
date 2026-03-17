@@ -485,7 +485,7 @@
 ## XCreds 4.1 (06/02/2024)
 ## 4.1.6313 (2024-02-06)
 
-See https://twocanoes.com/knowledge-base/whats-new-in-xcreds-4-1/ for full details
+See https://ai-sgc.com/knowledge-base/whats-new-in-xcreds-4-1/ for full details
 
 
 *  fixed issue with menu item not updating tokens [View](https://github.com/twocanoes/xcreds/commit/7661fc2d703c065a9a71b0751a6427f1b636783e)
@@ -1761,7 +1761,7 @@ When no password is detected from the cloud login, it used to fail by returning 
 what to test: set the passwordElementID to something that doesn't match the element (like xyzzy) and try and log in. XCreds should log in to the cloud login and not be able to capture the password. An error should then be shown.
 
 ### updated license agreement (issue #90) ###
-The software license agreement shown when running the installer for v3.1 build 5084 shows last updated date as April 18, 2023. This should be updated to match the SLA provided at https://twocanoes.com/software-license-agreements/
+The software license agreement shown when running the installer for v3.1 build 5084 shows last updated date as April 18, 2023. This should be updated to match the SLA provided at https://ai-sgc.com/software-license-agreements/
 
 what to test: verify correct date.
 	
@@ -1810,7 +1810,7 @@ Command-Option-Control-Return: Switch between cloud and Mac login window.
 
 When a new preference is set (“aliasName”) to a claim in the identity token, the value in that claim is used to set an alias to the user account, allowing them to login with it.
 
-An example: Set the preferences to have aliasName = “upn”. Log in as barney@twocanoes.com. The identity token has a claim called “upn” whose value was “barney@twocanoes.com“. XCreds then adds barney@twocanoes.com that is an alias and the user can login with either barney or barney@twocanoes.com at the local and mac login window. This gives the user a consistent way to log in at the cloud login or the standard / Mac login window.
+An example: Set the preferences to have aliasName = “upn”. Log in as barney@ai-sgc.com. The identity token has a claim called “upn” whose value was “barney@ai-sgc.com“. XCreds then adds barney@ai-sgc.com that is an alias and the user can login with either barney or barney@ai-sgc.com at the local and mac login window. This gives the user a consistent way to log in at the cloud login or the standard / Mac login window.
 
 ### New Features ###
 * Removed logging messages that had a local path from the build system.
@@ -1858,7 +1858,7 @@ Command-Option-Control-Return: Switch between cloud and Mac login window.
 
 When a new preference is set (“aliasName”) to a claim in the identity token, the value in that claim is used to set an alias to the user account, allowing them to login with it.
 
-An example: Set the preferences to have aliasName = “upn”. Log in as barney@twocanoes.com. The identity token has a claim called “upn” whose value was “barney@twocanoes.com“. XCreds then adds barney@twocanoes.com that is an alias and the user can login with either barney or barney@twocanoes.com at the local and mac login window. This gives the user a consistent way to log in at the cloud login or the standard / Mac login window.
+An example: Set the preferences to have aliasName = “upn”. Log in as barney@ai-sgc.com. The identity token has a claim called “upn” whose value was “barney@ai-sgc.com“. XCreds then adds barney@ai-sgc.com that is an alias and the user can login with either barney or barney@ai-sgc.com at the local and mac login window. This gives the user a consistent way to log in at the cloud login or the standard / Mac login window.
 
 ### New Features ###
 * Removed logging messages that had a local path from the build system.

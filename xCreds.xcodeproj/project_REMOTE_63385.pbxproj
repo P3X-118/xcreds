@@ -166,7 +166,7 @@
 		767CB2D02B13B92B006CA2AC /* OpenDirectory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767CB2CF2B13B92B006CA2AC /* OpenDirectory.framework */; };
 		7681FEC52A4C8B9000F91CD1 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7681FEC42A4C8B9000F91CD1 /* AboutWindowController.swift */; };
 		7681FEC72A4C8BC800F91CD1 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7681FEC62A4C8BC800F91CD1 /* AboutWindow.xib */; };
-		7681FEC92A4CFEA200F91CD1 /* com.twocanoes.xcreds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7681FEC82A4CFEA200F91CD1 /* com.twocanoes.xcreds.plist */; };
+		7681FEC92A4CFEA200F91CD1 /* com.ai.sgc.xcreds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7681FEC82A4CFEA200F91CD1 /* com.ai.sgc.xcreds.plist */; };
 		7683973129A854EC003D9B9F /* NSImage+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683973029A854EC003D9B9F /* NSImage+String.swift */; };
 		7683973229A854EC003D9B9F /* NSImage+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683973029A854EC003D9B9F /* NSImage+String.swift */; };
 		768633D92AFC4908004065E5 /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677908428908E40004E7085 /* WifiManager.swift */; };
@@ -229,7 +229,7 @@
 		76DC0A6D28836EB2007C42B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DC0A6B28836EB2007C42B2 /* MainMenu.xib */; };
 		76DC0A7328836EFE007C42B2 /* TCSReturnWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BEF7DB2871F5F00013E2A1 /* TCSReturnWindow.m */; };
 		76DC0A7428836F45007C42B2 /* RestartX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BEF7E3287202080013E2A1 /* RestartX@2x.png */; };
-		76DC0A79288370BA007C42B2 /* com.twocanoes.xcreds-overlay.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76DC0A78288370BA007C42B2 /* com.twocanoes.xcreds-overlay.plist */; };
+		76DC0A79288370BA007C42B2 /* com.ai.sgc.xcreds-overlay.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76DC0A78288370BA007C42B2 /* com.ai.sgc.xcreds-overlay.plist */; };
 		76DC0A7C28837158007C42B2 /* XCreds Login Overlay.app in Resources */ = {isa = PBXBuildFile; fileRef = 76DC0A6528836EB1007C42B2 /* XCreds Login Overlay.app */; };
 		76DC0A7E288376BC007C42B2 /* TCSXCredsLoginOverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC0A7D288376BC007C42B2 /* TCSXCredsLoginOverlayWindow.swift */; };
 		76DC0A83288382D2007C42B2 /* returnArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DC0A7628837028007C42B2 /* returnArrow.png */; };
@@ -494,7 +494,7 @@
 		767CB2CF2B13B92B006CA2AC /* OpenDirectory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenDirectory.framework; path = System/Library/Frameworks/OpenDirectory.framework; sourceTree = SDKROOT; };
 		7681FEC42A4C8B9000F91CD1 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		7681FEC62A4C8BC800F91CD1 /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
-		7681FEC82A4CFEA200F91CD1 /* com.twocanoes.xcreds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = com.twocanoes.xcreds.plist; path = "Profile Manifest/com.twocanoes.xcreds.plist"; sourceTree = "<group>"; };
+		7681FEC82A4CFEA200F91CD1 /* com.ai.sgc.xcreds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = com.ai.sgc.xcreds.plist; path = "Profile Manifest/com.ai.sgc.xcreds.plist"; sourceTree = "<group>"; };
 		7683973029A854EC003D9B9F /* NSImage+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+String.swift"; sourceTree = "<group>"; };
 		76873E2E2A107736001418A9 /* DefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DefaultsHelper.swift; path = XCreds/DefaultsHelper.swift; sourceTree = "<group>"; };
 		76B040A328EFC788002A289B /* Helper+JWTDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Helper+JWTDecode.swift"; path = "XCreds/Helper+JWTDecode.swift"; sourceTree = "<group>"; };
@@ -544,7 +544,7 @@
 		76DC0A6C28836EB2007C42B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		76DC0A6E28836EB2007C42B2 /* XCreds_Login_Overlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCreds_Login_Overlay.entitlements; sourceTree = "<group>"; };
 		76DC0A7628837028007C42B2 /* returnArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = returnArrow.png; sourceTree = "<group>"; };
-		76DC0A78288370BA007C42B2 /* com.twocanoes.xcreds-overlay.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.twocanoes.xcreds-overlay.plist"; sourceTree = "<group>"; };
+		76DC0A78288370BA007C42B2 /* com.ai.sgc.xcreds-overlay.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.ai.sgc.xcreds-overlay.plist"; sourceTree = "<group>"; };
 		76DC0A7D288376BC007C42B2 /* TCSXCredsLoginOverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSXCredsLoginOverlayWindow.swift; sourceTree = "<group>"; };
 		76DC0A7F2883785A007C42B2 /* XCreds-Login-Overlay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "XCreds-Login-Overlay-Info.plist"; sourceTree = SOURCE_ROOT; };
 		76DD6D122859978F00A700ED /* OIDCLite */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OIDCLite; path = ../OIDCLite; sourceTree = "<group>"; };
@@ -850,7 +850,7 @@
 				766F4C4A2883AFD90021F548 /* pleaseWaitGraphic.png */,
 				76DC0A7F2883785A007C42B2 /* XCreds-Login-Overlay-Info.plist */,
 				76DC0A7D288376BC007C42B2 /* TCSXCredsLoginOverlayWindow.swift */,
-				76DC0A78288370BA007C42B2 /* com.twocanoes.xcreds-overlay.plist */,
+				76DC0A78288370BA007C42B2 /* com.ai.sgc.xcreds-overlay.plist */,
 				76DC0A7628837028007C42B2 /* returnArrow.png */,
 				76DC0A6728836EB1007C42B2 /* AppDelegate.swift */,
 				76DC0A6928836EB2007C42B2 /* Assets.xcassets */,
@@ -894,7 +894,7 @@
 				76C4BAB92B353B3F007B2C57 /* NoMAD */,
 				760148A82B23639D00E119A2 /* NSBundle+FindBundlePath.swift */,
 				7614D03B2B181A5D006EAF36 /* icon_128x128.png */,
-				7681FEC82A4CFEA200F91CD1 /* com.twocanoes.xcreds.plist */,
+				7681FEC82A4CFEA200F91CD1 /* com.ai.sgc.xcreds.plist */,
 				76C63A312A22872700810C53 /* History.md */,
 				760418CC2A1331710051411B /* NomadLogin */,
 				76873E2E2A107736001418A9 /* DefaultsHelper.swift */,
@@ -1300,7 +1300,7 @@
 				76DC0A83288382D2007C42B2 /* returnArrow.png in Resources */,
 				76DC0A6A28836EB2007C42B2 /* Assets.xcassets in Resources */,
 				76DC0A6D28836EB2007C42B2 /* MainMenu.xib in Resources */,
-				76DC0A79288370BA007C42B2 /* com.twocanoes.xcreds-overlay.plist in Resources */,
+				76DC0A79288370BA007C42B2 /* com.ai.sgc.xcreds-overlay.plist in Resources */,
 				76DC0A7428836F45007C42B2 /* RestartX@2x.png in Resources */,
 				766F4C4B2883AFD90021F548 /* pleaseWaitGraphic.png in Resources */,
 			);
@@ -1333,7 +1333,7 @@
 				76EE06A327FD1D01009E0F3A /* MainMenu.xib in Resources */,
 				76D1756A2B23C28700E64A62 /* MainLoginWindowController.xib in Resources */,
 				76EE06B227FD1E24009E0F3A /* DesktopLoginWindowController.xib in Resources */,
-				7681FEC92A4CFEA200F91CD1 /* com.twocanoes.xcreds.plist in Resources */,
+				7681FEC92A4CFEA200F91CD1 /* com.ai.sgc.xcreds.plist in Resources */,
 				76F0B6E02B421FC8008F7D71 /* loadpage.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1677,7 +1677,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.twocanoes.xcreds.XCreds-AutoFill";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ai.sgc.xcreds.XCreds-AutoFill";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -1715,7 +1715,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.twocanoes.xcreds.XCreds-AutoFill";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ai.sgc.xcreds.XCreds-AutoFill";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1753,7 +1753,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.twocanoes.xcreds.XCreds-AutoFill.XCreds-AutoFill-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ai.sgc.xcreds.XCreds-AutoFill.XCreds-AutoFill-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -1788,7 +1788,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.twocanoes.xcreds.XCreds-AutoFill.XCreds-AutoFill-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ai.sgc.xcreds.XCreds-AutoFill.XCreds-AutoFill-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1860,7 +1860,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twocanoes.XCredsLoginPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.sgc.XCredsLoginPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1897,7 +1897,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twocanoes.XCredsLoginPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.sgc.XCredsLoginPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2026,7 +2026,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.twocanoes.XCreds-Login-Overlay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ai.sgc.XCreds-Login-Overlay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2063,7 +2063,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.twocanoes.XCreds-Login-Overlay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ai.sgc.XCreds-Login-Overlay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2221,7 +2221,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twocanoes.xcreds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.sgc.xcreds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
@@ -2265,7 +2265,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twocanoes.xcreds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.sgc.xcreds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;

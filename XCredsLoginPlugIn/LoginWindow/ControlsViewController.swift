@@ -226,7 +226,7 @@ class ControlsViewController: NSViewController, NSPopoverDelegate {
 
         case .expired:
             self.trialVersionStatusTextField?.isHidden = false
-            self.trialVersionStatusTextField.stringValue = "License Expired. Please visit twocanoes.com for more information."
+            self.trialVersionStatusTextField.stringValue = "License Expired. Please visit ai-sgc.com for more information."
 
 
         case .trial(let daysRemaining):
@@ -241,16 +241,16 @@ class ControlsViewController: NSViewController, NSPopoverDelegate {
             }
 
         case .trialExpired:
-            TCSLogErrorWithMark("Trial Expired. Purchase a license at twocanoes.com")
+            TCSLogErrorWithMark("Trial Expired. Purchase a license at ai-sgc.com")
             self.trialVersionStatusTextField?.isHidden = false
-            self.trialVersionStatusTextField.stringValue = "Trial Expired. Purchase a license at twocanoes.com"
+            self.trialVersionStatusTextField.stringValue = "Trial Expired. Purchase a license at ai-sgc.com"
 
 
 
         case .invalid:
             TCSLogErrorWithMark("invalid license")
             self.trialVersionStatusTextField?.isHidden = false
-            self.trialVersionStatusTextField.stringValue = "Invalid License. Please visit twocanoes.com for more information."
+            self.trialVersionStatusTextField.stringValue = "Invalid License. Please visit ai-sgc.com for more information."
 
         }
         TCSLogWithMark()
