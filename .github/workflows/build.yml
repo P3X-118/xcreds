@@ -154,7 +154,7 @@ jobs:
     name: Create Release
     needs: package
     runs-on: macos-14
-    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/heads/release-')
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/heads/release-') || github.ref == 'refs/heads/sgc'
 
     steps:
       - name: Checkout
