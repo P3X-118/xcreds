@@ -4,9 +4,9 @@
     {
       "identity" : "oidclite",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mactroll/OIDCLite.git",
+      "location" : "https://github.com/twocanoes/OIDCLite.git",
       "state" : {
-        "version" : "1.2.0"
+        "revision" : "b172e6d22b730c7f93078ee0cf3e5f555f016069"
       }
     },
     {
